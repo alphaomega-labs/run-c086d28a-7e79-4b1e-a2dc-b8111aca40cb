@@ -1,0 +1,58 @@
+[
+  {
+    "path": "paper/figures/iter_1/fig_main_results.pdf",
+    "width": 2304,
+    "height": 1008,
+    "pixel_variance": 1273.7051373951663,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_stability_tradeoff.pdf",
+    "width": 2304,
+    "height": 864,
+    "pixel_variance": 1044.708096002009,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_ablation_pooled_gap.pdf",
+    "width": 2304,
+    "height": 1008,
+    "pixel_variance": 2399.4410551897668,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_real_setting_performance.pdf",
+    "width": 1440,
+    "height": 864,
+    "pixel_variance": 3531.4449551794255,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_expC_gate_roc_pr.pdf",
+    "width": 2160,
+    "height": 864,
+    "pixel_variance": 1025.3081568325877,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_expC_retention_vs_error.pdf",
+    "width": 2304,
+    "height": 864,
+    "pixel_variance": 1629.2739301585948,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_expC_threshold_feasibility.pdf",
+    "width": 2304,
+    "height": 864,
+    "pixel_variance": 2372.371621611516,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_1/fig_artifact_quality_checks.pdf",
+    "width": 2160,
+    "height": 864,
+    "pixel_variance": 6895.024459697778,
+    "readable": true
+  }
+]

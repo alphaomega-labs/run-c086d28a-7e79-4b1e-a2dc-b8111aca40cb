@@ -1,0 +1,42 @@
+{
+  "code": [
+    "code/run_experiments.py",
+    "code/prepare_real_manifests.py",
+    "code/build_iter_config.py",
+    "code/__init__.py",
+    "code/core.py",
+    "code/analysis.py",
+    "code/plotting.py",
+    "code/real_data.py",
+    "code/real_data_prep.py",
+    "code/sympy_validation.py",
+    "code/pdf_check.py"
+  ],
+  "created_at": "2026-03-06T08:44:00.257493+00:00",
+  "paper": {
+    "bibtex": "paper/references.bib",
+    "latex": "paper/main.tex",
+    "pdf": "paper/main.pdf",
+    "thumbnail": null
+  },
+  "phases": [
+    "hypothesis_methodology",
+    "insights_refinement",
+    "knowledge_acquisition",
+    "knowledge_distillation",
+    "review_feedback",
+    "user_input",
+    "user_presentation",
+    "validation_simulation",
+    "writing_presentation"
+  ],
+  "session_id": "724872e2-3ee2-4cca-ba1d-031b87307ec0",
+  "sources": "sources/sources.json",
+  "workspace": {
+    "experiments": "experiments",
+    "knowledge": "knowledge",
+    "paper_data": "paper/data",
+    "paper_figures": "paper/figures",
+    "paper_tables": "paper/tables"
+  }
+}

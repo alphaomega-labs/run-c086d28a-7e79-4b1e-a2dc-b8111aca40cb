@@ -1,0 +1,1529 @@
+[
+  {
+    "assumptions": [
+      "Covariate shift: p_s(x) != p_t(x)",
+      "Conditional invariance: p_s(y|x)=p_t(y|x)"
+    ],
+    "authors": [
+      "Masashi Sugiyama",
+      "Matthias Krauledat",
+      "Klaus-Robert Muller"
+    ],
+    "citation": "S01",
+    "claims": [
+      "Ordinary CV is biased under covariate shift",
+      "Importance-weighted CV yields unbiased risk estimates"
+    ],
+    "conclusions": [
+      "IWCV is a practical selection rule for importance-weighted learning"
+    ],
+    "contributions": [
+      "Unbiased cross-validation objective under shift",
+      "Empirical validation in simulation and BCI"
+    ],
+    "future_work": [
+      "Robustness under imperfect ratio estimates"
+    ],
+    "key_equations": [
+      "w(x)=p_t(x)/p_s(x)",
+      "\\widehat R_{IWCV}=\\frac{1}{K}\\sum_{k=1}^K\\frac{1}{|V_k|}\\sum_{(x_i,y_i)\\in V_k}w(x_i)\\ell(f_{-k}(x_i),y_i)"
+    ],
+    "limitations": [
+      "Relies on accurate importance weights"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces IWCV, proving unbiased model selection under covariate shift and making IWLS workflows tunable without target labels.",
+    "title": "Covariate Shift Adaptation by Importance Weighted Cross Validation",
+    "url": "https://www.jmlr.org/papers/v8/sugiyama07a.html",
+    "year": 2007
+  },
+  {
+    "assumptions": [
+      "Positive support overlap p_s(x)>0 where p_t(x)>0"
+    ],
+    "authors": [
+      "Masashi Sugiyama",
+      "Shinichi Nakajima",
+      "Hisashi Kashima",
+      "Paul von Bunau",
+      "Motoaki Kawanabe"
+    ],
+    "citation": "S02",
+    "claims": [
+      "Direct ratio estimation is superior to density-ratio-via-density-estimation in many settings"
+    ],
+    "conclusions": [
+      "KLIEP improves covariate-shift correction quality"
+    ],
+    "contributions": [
+      "KLIEP objective and convex optimization",
+      "Likelihood-style model selection for ratio model"
+    ],
+    "future_work": [
+      "Out-of-sample robust ratio models"
+    ],
+    "key_equations": [
+      "w(x)=p_t(x)/p_s(x)",
+      "\\max_{\\alpha}\\;\\frac{1}{n_t}\\sum_{j=1}^{n_t}\\log\\left(\\sum_{\\ell=1}^b\\alpha_\\ell\\phi_\\ell(x_j^t)\\right)\\;\\text{s.t.}\\;\\frac{1}{n_s}\\sum_{i=1}^{n_s}\\widehat w(x_i^s)=1,\\;\\alpha_\\ell\\ge 0"
+    ],
+    "limitations": [
+      "Performance degrades under severe support mismatch"
+    ],
+    "source_type": "paper",
+    "summary": "Proposes KLIEP to estimate density ratios directly via KL minimization, avoiding separate density estimation and improving high-dimensional adaptation.",
+    "title": "Direct Importance Estimation with Model Selection and Its Application to Covariate Shift Adaptation",
+    "url": "https://papers.nips.cc/paper_files/paper/2007/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract.html",
+    "year": 2007
+  },
+  {
+    "assumptions": [
+      "Covariate shift with shared conditional"
+    ],
+    "authors": [
+      "Jiayuan Huang",
+      "Alex Smola",
+      "Arthur Gretton",
+      "Karsten Borgwardt",
+      "Bernhard Scholkopf"
+    ],
+    "citation": "S03",
+    "claims": [
+      "Moment matching in RKHS approximates ratio weighting"
+    ],
+    "conclusions": [
+      "KMM is effective for sample selection bias correction"
+    ],
+    "contributions": [
+      "KMM quadratic program for importance weighting"
+    ],
+    "future_work": [
+      "Scalable KMM variants"
+    ],
+    "key_equations": [
+      "\\min_{\\beta}\\left\\|\\frac{1}{n_s}\\sum_{i=1}^{n_s}\\beta_i\\Phi(x_i^s)-\\frac{1}{n_t}\\sum_{j=1}^{n_t}\\Phi(x_j^t)\\right\\|_\\mathcal{H}^2"
+    ],
+    "limitations": [
+      "Sensitive to kernel choice and regularization"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces Kernel Mean Matching to match source and target means in RKHS, producing instance weights for shift correction.",
+    "title": "Correcting Sample Selection Bias by Unlabeled Data",
+    "url": "https://papers.nips.cc/paper/3075-correcting-sample-selection-bias-by-unlabeled-data",
+    "year": 2006
+  },
+  {
+    "assumptions": [
+      "Characteristic kernels for identifiability"
+    ],
+    "authors": [
+      "Arthur Gretton",
+      "Karsten M. Borgwardt",
+      "Malte J. Rasch",
+      "Bernhard Scholkopf",
+      "Alexander Smola"
+    ],
+    "citation": "S04",
+    "claims": [
+      "MMD supports nonparametric two-sample testing"
+    ],
+    "conclusions": [
+      "MMD is practical and statistically grounded"
+    ],
+    "contributions": [
+      "MMD statistic and concentration bounds"
+    ],
+    "future_work": [
+      "Linear-time and adaptive kernels"
+    ],
+    "key_equations": [
+      "\\mathrm{MMD}(\\mathcal{F},P,Q)=\\sup_{f\\in\\mathcal{F}}(\\mathbb{E}_P[f]-\\mathbb{E}_Q[f])"
+    ],
+    "limitations": [
+      "Quadratic-time estimator is expensive"
+    ],
+    "source_type": "paper",
+    "summary": "Defines MMD and hypothesis tests for distribution mismatch, widely used as a source-target discrepancy diagnostic in UDA.",
+    "title": "A Kernel Two-Sample Test",
+    "url": "https://www.jmlr.org/papers/v13/gretton12a.html",
+    "year": 2012
+  },
+  {
+    "assumptions": [
+      "Shared hypothesis class across domains"
+    ],
+    "authors": [
+      "Shai Ben-David",
+      "John Blitzer",
+      "Koby Crammer",
+      "Alex Kulesza",
+      "Fernando Pereira",
+      "Jennifer Wortman Vaughan"
+    ],
+    "citation": "S05",
+    "claims": [
+      "Domain discrepancy and source risk jointly control target risk"
+    ],
+    "conclusions": [
+      "Adaptation is possible when divergence and joint error are small"
+    ],
+    "contributions": [
+      "H\u0394H-divergence bound"
+    ],
+    "future_work": [
+      "Tighter data-dependent bounds"
+    ],
+    "key_equations": [
+      "\\epsilon_T(h)\\le \\epsilon_S(h)+\\frac{1}{2}d_{\\mathcal{H}\\Delta\\mathcal{H}}(S,T)+\\lambda^*"
+    ],
+    "limitations": [
+      "Bounds can be loose in deep settings"
+    ],
+    "source_type": "paper",
+    "summary": "Provides foundational domain adaptation generalization bounds connecting target error to source error, divergence, and joint optimal hypothesis error.",
+    "title": "A Theory of Learning from Different Domains",
+    "url": "https://link.springer.com/article/10.1007/s10994-009-5152-4",
+    "year": 2010
+  },
+  {
+    "assumptions": [
+      "Loss-specific discrepancy and bounded complexity"
+    ],
+    "authors": [
+      "Yishay Mansour",
+      "Mehryar Mohri",
+      "Afshin Rostamizadeh"
+    ],
+    "citation": "S06",
+    "claims": [
+      "Discrepancy is a better task-aware distance than generic divergences"
+    ],
+    "conclusions": [
+      "Minimizing empirical discrepancy improves adaptation"
+    ],
+    "contributions": [
+      "Discrepancy distance for adaptation",
+      "Finite-sample estimation bounds"
+    ],
+    "future_work": [
+      "Large-scale discrepancy minimization"
+    ],
+    "key_equations": [
+      "\\operatorname{disc}_L(P,Q)=\\sup_{h,h'\\in\\mathcal H}|\\mathbb E_P[L(h,h')]-\\mathbb E_Q[L(h,h')]|"
+    ],
+    "limitations": [
+      "Requires solving nontrivial optimization"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces discrepancy distance-based adaptation bounds and algorithms relevant to regression and squared loss settings.",
+    "title": "Domain Adaptation: Learning Bounds and Algorithms",
+    "url": "https://research.google/pubs/domain-adaptation-learning-bounds-and-algorithms/",
+    "year": 2009
+  },
+  {
+    "assumptions": [
+      "Target distribution as mixture-related to sources"
+    ],
+    "authors": [
+      "Yishay Mansour",
+      "Mehryar Mohri",
+      "Afshin Rostamizadeh"
+    ],
+    "citation": "S07",
+    "claims": [
+      "Distribution-weighted combinations outperform naive pooling"
+    ],
+    "conclusions": [
+      "Careful source weighting is essential in multi-source transfer"
+    ],
+    "contributions": [
+      "Renyi-divergence-based excess-risk bounds"
+    ],
+    "future_work": [
+      "Practical estimators for mixture weights"
+    ],
+    "key_equations": [
+      "D_\\alpha(P\\|Q)=\\frac{1}{\\alpha-1}\\log\\int p(x)^\\alpha q(x)^{1-\\alpha}dx"
+    ],
+    "limitations": [
+      "Theory may not capture deep model optimization effects"
+    ],
+    "source_type": "paper",
+    "summary": "Develops multi-source adaptation theory and weighting rules linked to Renyi divergence, directly relevant for source dataset selection among many candidates.",
+    "title": "Multiple Source Adaptation and the Renyi Divergence",
+    "url": "https://proceedings.mlr.press/v9/mansour10a.html",
+    "year": 2010
+  },
+  {
+    "assumptions": [
+      "Shared label space across domains"
+    ],
+    "authors": [
+      "Yaroslav Ganin",
+      "Evgeniya Ustinova",
+      "Hana Ajakan",
+      "Pascal Germain",
+      "Hugo Larochelle",
+      "Francois Laviolette",
+      "Mario Marchand",
+      "Victor Lempitsky"
+    ],
+    "citation": "S08",
+    "claims": [
+      "Adversarial invariance improves target accuracy"
+    ],
+    "conclusions": [
+      "DANN is a strong general-purpose UDA baseline"
+    ],
+    "contributions": [
+      "Gradient reversal layer for adversarial adaptation"
+    ],
+    "future_work": [
+      "Conditional alignment objectives"
+    ],
+    "key_equations": [
+      "\\min_{\\theta_f,\\theta_y}\\max_{\\theta_d}\\;\\mathcal L_y(\\theta_f,\\theta_y)-\\lambda\\mathcal L_d(\\theta_f,\\theta_d)"
+    ],
+    "limitations": [
+      "Can fail under conditional/label shift"
+    ],
+    "source_type": "paper",
+    "summary": "Canonical DANN objective for learning domain-invariant features using gradient reversal; baseline for UDA comparisons.",
+    "title": "Domain-Adversarial Training of Neural Networks",
+    "url": "https://www.jmlr.org/papers/v17/15-239.html",
+    "year": 2016
+  },
+  {
+    "assumptions": [
+      "Target classes correspond to source classes"
+    ],
+    "authors": [
+      "Mingsheng Long",
+      "Zhangjie Cao",
+      "Jianmin Wang",
+      "Michael I. Jordan"
+    ],
+    "citation": "S09",
+    "claims": [
+      "Conditioning on predictions improves class-wise transfer"
+    ],
+    "conclusions": [
+      "CDAN outperforms vanilla adversarial alignment"
+    ],
+    "contributions": [
+      "Conditional adversarial alignment"
+    ],
+    "future_work": [
+      "Robust conditional alignment under label shift"
+    ],
+    "key_equations": [
+      "\\min_{G,F}\\max_D\\;\\mathcal L_y(F\\circ G)-\\lambda\\mathcal L_d(D(T(G(x),F(G(x)))))"
+    ],
+    "limitations": [
+      "Pseudo-label noise can destabilize training"
+    ],
+    "source_type": "paper",
+    "summary": "Extends adversarial adaptation with classifier-conditional alignment to mitigate multimodal mismatch.",
+    "title": "Conditional Adversarial Domain Adaptation",
+    "url": "https://papers.nips.cc/paper/7436-conditional-adversarial-domain-adaptation",
+    "year": 2018
+  },
+  {
+    "assumptions": [
+      "Covariance alignment approximates domain discrepancy reduction"
+    ],
+    "authors": [
+      "Baochen Sun",
+      "Kate Saenko"
+    ],
+    "citation": "S10",
+    "claims": [
+      "Second-order alignment improves transfer with low overhead"
+    ],
+    "conclusions": [
+      "Deep CORAL is a strong lightweight baseline"
+    ],
+    "contributions": [
+      "CORAL loss for deep adaptation"
+    ],
+    "future_work": [
+      "Class-conditional covariance matching"
+    ],
+    "key_equations": [
+      "\\mathcal L_{CORAL}=\\frac{1}{4d^2}\\|C_s-C_t\\|_F^2"
+    ],
+    "limitations": [
+      "Ignores higher-order/conditional mismatch"
+    ],
+    "source_type": "paper",
+    "summary": "Matches second-order feature statistics between domains with a simple differentiable penalty.",
+    "title": "Deep CORAL: Correlation Alignment for Deep Domain Adaptation",
+    "url": "https://arxiv.org/abs/1607.01719",
+    "year": 2016
+  },
+  {
+    "assumptions": [
+      "Feature-space distribution alignment improves transfer"
+    ],
+    "authors": [
+      "Mingsheng Long",
+      "Yue Cao",
+      "Jianmin Wang",
+      "Michael I. Jordan"
+    ],
+    "citation": "S11",
+    "claims": [
+      "Joint feature learning and MMD alignment improves target risk"
+    ],
+    "conclusions": [
+      "DAN became a standard discrepancy baseline"
+    ],
+    "contributions": [
+      "Multi-layer MK-MMD adaptation in deep nets"
+    ],
+    "future_work": [
+      "Adaptive kernel and conditional alignment"
+    ],
+    "key_equations": [
+      "\\mathcal L=\\mathcal L_y+\\lambda\\sum_{\\ell}\\mathrm{MMD}_{k_\\ell}^2(\\mathcal D_s^\\ell,\\mathcal D_t^\\ell)"
+    ],
+    "limitations": [
+      "Kernel choices influence stability"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces deep adaptation networks with MK-MMD penalties across layers to reduce shift.",
+    "title": "Learning Transferable Features with Deep Adaptation Networks",
+    "url": "https://proceedings.mlr.press/v37/long15.html",
+    "year": 2015
+  },
+  {
+    "assumptions": [
+      "Label-space shared"
+    ],
+    "authors": [
+      "Eric Tzeng",
+      "Judy Hoffman",
+      "Kate Saenko",
+      "Trevor Darrell"
+    ],
+    "citation": "S12",
+    "claims": [
+      "Discriminative adversarial adaptation can match generative methods"
+    ],
+    "conclusions": [
+      "Simple staged adversarial adaptation is effective"
+    ],
+    "contributions": [
+      "ADDA framework"
+    ],
+    "future_work": [
+      "Open-set and multi-source ADDA"
+    ],
+    "key_equations": [
+      "\\min_{M_t}\\max_D\\;\\mathbb E_{x_s}\\log D(M_s(x_s))+\\mathbb E_{x_t}\\log(1-D(M_t(x_t)))"
+    ],
+    "limitations": [
+      "Single-source and closed-set assumptions"
+    ],
+    "source_type": "paper",
+    "summary": "Separates source pretraining and target adversarial alignment for discriminative adaptation.",
+    "title": "Adversarial Discriminative Domain Adaptation",
+    "url": "https://openaccess.thecvf.com/content_cvpr_2017/html/Tzeng_Adversarial_Discriminative_Domain_CVPR_2017_paper.html",
+    "year": 2017
+  },
+  {
+    "assumptions": [
+      "Decision-boundary discrepancy reveals target mismatch"
+    ],
+    "authors": [
+      "Kuniaki Saito",
+      "Kohei Watanabe",
+      "Yoshitaka Ushiku",
+      "Tatsuya Harada"
+    ],
+    "citation": "S13",
+    "claims": [
+      "Classifier discrepancy helps avoid mode collapse in alignment"
+    ],
+    "conclusions": [
+      "MCD improves transfer on challenging shifts"
+    ],
+    "contributions": [
+      "MCD min-max adaptation algorithm"
+    ],
+    "future_work": [
+      "Stability and calibration-aware variants"
+    ],
+    "key_equations": [
+      "\\max_{F_1,F_2}\\;\\mathbb E_{x_t}\\|F_1(G(x_t))-F_2(G(x_t))\\|_1"
+    ],
+    "limitations": [
+      "Optimization can be unstable"
+    ],
+    "source_type": "paper",
+    "summary": "Uses disagreement between task classifiers as target discrepancy signal for adaptation.",
+    "title": "Maximum Classifier Discrepancy for Unsupervised Domain Adaptation",
+    "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Saito_Maximum_Classifier_Discrepancy_CVPR_2018_paper.html",
+    "year": 2018
+  },
+  {
+    "assumptions": [
+      "Margin-based surrogate for adaptation bounds"
+    ],
+    "authors": [
+      "Yuchen Zhang",
+      "Ting Liu",
+      "Mingsheng Long",
+      "Michael I. Jordan"
+    ],
+    "citation": "S14",
+    "claims": [
+      "MDD yields tighter and more effective adaptation objective"
+    ],
+    "conclusions": [
+      "Theory-aligned discrepancy improves UDA"
+    ],
+    "contributions": [
+      "MDD distance and algorithm"
+    ],
+    "future_work": [
+      "Regression-specific MDD variants"
+    ],
+    "key_equations": [
+      "d_{f,\\mathcal F}^{(\\rho)}(P,Q)=\\sup_{f'\\in\\mathcal F}(R_Q^{(\\rho)}(f,f')-R_P^{(\\rho)}(f,f'))"
+    ],
+    "limitations": [
+      "Mostly classification-focused"
+    ],
+    "source_type": "paper",
+    "summary": "Proposes Margin Disparity Discrepancy (MDD) with generalization theory and practical algorithm.",
+    "title": "Bridging Theory and Algorithm for Domain Adaptation",
+    "url": "https://proceedings.mlr.press/v97/zhang19i.html",
+    "year": 2019
+  },
+  {
+    "assumptions": [
+      "Unlabeled target covariates are available"
+    ],
+    "authors": [
+      "Sangdon Park",
+      "Osbert Bastani",
+      "James Weimer",
+      "Insup Lee"
+    ],
+    "citation": "S15",
+    "claims": [
+      "Joint adaptation and weighting improves calibration"
+    ],
+    "conclusions": [
+      "Shift-aware calibration outperforms naive calibration"
+    ],
+    "contributions": [
+      "Calibration-aware covariate shift correction"
+    ],
+    "future_work": [
+      "Broader uncertainty quantification under shift"
+    ],
+    "key_equations": [
+      "w(x)=p_t(x)/p_s(x)"
+    ],
+    "limitations": [
+      "Needs enough target covariates"
+    ],
+    "source_type": "paper",
+    "summary": "Combines importance weighting and feature adaptation for uncertainty calibration under shift, relevant to risk-aware source selection.",
+    "title": "Calibrated Prediction with Covariate Shift via Unsupervised Domain Adaptation",
+    "url": "https://proceedings.mlr.press/v108/park20b.html",
+    "year": 2020
+  },
+  {
+    "assumptions": [
+      "Covariate shift with ratio regularity",
+      "Neural approximation conditions"
+    ],
+    "authors": [
+      "Xingdong Feng",
+      "Xin He",
+      "Yuling Jiao",
+      "Lican Kang",
+      "Caixing Wang"
+    ],
+    "citation": "S16",
+    "claims": [
+      "Reweighting improves quantile estimation under shift"
+    ],
+    "conclusions": [
+      "Theory supports practical reweighted deep estimators"
+    ],
+    "contributions": [
+      "Two-stage pretraining-reweighting quantile method",
+      "Finite-sample guarantees"
+    ],
+    "future_work": [
+      "Adaptive ratio estimation and robustness"
+    ],
+    "key_equations": [
+      "\\hat f=\\arg\\min_f\\sum_{i=1}^{n_s}\\hat w(x_i)\\rho_\\tau(y_i-f(x_i))+\\lambda\\Omega(f)"
+    ],
+    "limitations": [
+      "Hyperparameter sensitivity in high dimensions"
+    ],
+    "source_type": "paper",
+    "summary": "Analyzes reweighted deep nonparametric estimators under covariate shift with non-asymptotic error bounds.",
+    "title": "Deep Nonparametric Quantile Regression under Covariate Shift",
+    "url": "https://jmlr.org/papers/v25/24-0906.html",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Kernel ridge regression setting",
+      "Covariate shift"
+    ],
+    "authors": [
+      "Davit Gogolashvili",
+      "Matteo Zecchin",
+      "Motonobu Kanagawa",
+      "Marios Kountouris",
+      "Maurizio Filippone"
+    ],
+    "citation": "S17",
+    "claims": [
+      "IW can be essential under misspecification even for nonparametric models"
+    ],
+    "conclusions": [
+      "Need-for-IW depends on specification and model class"
+    ],
+    "contributions": [
+      "Regime analysis for necessity of IW"
+    ],
+    "future_work": [
+      "Extension to deep learners and finite-sample diagnostics"
+    ],
+    "key_equations": [
+      "\\hat f_{IW}=\\arg\\min_{f\\in\\mathcal H}\\frac{1}{n_s}\\sum_i\\hat w(x_i)(f(x_i)-y_i)^2+\\lambda\\|f\\|_\\mathcal H^2"
+    ],
+    "limitations": [
+      "Primarily kernel-ridge-focused theory"
+    ],
+    "source_type": "paper",
+    "summary": "Clarifies regimes where IW is necessary, especially nonparametric misspecified settings; directly informs when IWLS-based source selection is justified.",
+    "title": "When is Importance Weighting Correction Needed for Covariate Shift Adaptation?",
+    "url": "https://arxiv.org/abs/2303.04020",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Covariate shift with regularized risk minimization"
+    ],
+    "authors": [
+      "Motonobu Kanagawa",
+      "Ahmet Alacaoglu",
+      "Matteo Zecchin",
+      "Maurizio Filippone"
+    ],
+    "citation": "S18",
+    "claims": [
+      "Regularization interacts with shift correction in nontrivial ways"
+    ],
+    "conclusions": [
+      "Shift-aware regularization design matters"
+    ],
+    "contributions": [
+      "Unified regularization view under shift"
+    ],
+    "future_work": [
+      "Practical model selection criteria"
+    ],
+    "key_equations": [
+      "\\hat f=\\arg\\min_f\\frac{1}{n_s}\\sum_i\\hat w(x_i)\\ell(f(x_i),y_i)+\\lambda\\mathcal R(f)"
+    ],
+    "limitations": [
+      "Theory-first, limited benchmark scale"
+    ],
+    "source_type": "paper",
+    "summary": "Studies regularization structure under covariate shift and its interaction with importance-weighted objectives.",
+    "title": "General regularization in covariate shift adaptation",
+    "url": "https://arxiv.org/abs/2307.11503",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Unsupervised DA protocol should avoid target labels"
+    ],
+    "authors": [
+      "Mohamed Ragab",
+      "Emadeldeen Eldele",
+      "Wee Ling Tan",
+      "Chuan-Sheng Foo",
+      "Zhenghua Chen",
+      "Min Wu",
+      "Chee-Keong Kwoh",
+      "Xiaoli Li"
+    ],
+    "citation": "S19",
+    "claims": [
+      "Evaluation inconsistencies strongly affect reported TS-UDA results"
+    ],
+    "conclusions": [
+      "Standardization changes method rankings and improves rigor"
+    ],
+    "contributions": [
+      "Unified time-series UDA benchmark suite",
+      "Model-selection protocols (SRC/DEV/FST)"
+    ],
+    "future_work": [
+      "Expand to regression and source-selection tasks"
+    ],
+    "key_equations": [
+      "\\mathcal L=\\mathcal L_{src}+\\lambda\\mathcal L_{align}"
+    ],
+    "limitations": [
+      "Focuses on classification tasks"
+    ],
+    "source_type": "paper",
+    "summary": "Provides standardized TS-UDA evaluation without target-label leakage for model selection, central for the user\u2019s Setting C.",
+    "title": "ADATIME: A Benchmarking Suite for Domain Adaptation on Time Series Data",
+    "url": "https://arxiv.org/abs/2203.08321",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Complex temporal and frequency shifts across domains"
+    ],
+    "authors": [
+      "Huan He",
+      "Owen Queen",
+      "Teddy Koker",
+      "Consuelo Cuevas",
+      "Theodoros Tsiligkaridis",
+      "Marinka Zitnik"
+    ],
+    "citation": "S20",
+    "claims": [
+      "Joint handling of both shifts improves target performance"
+    ],
+    "conclusions": [
+      "Raincoat improves robustness on TS transfer tasks"
+    ],
+    "contributions": [
+      "Joint feature/label-shift aware TS-UDA method"
+    ],
+    "future_work": [
+      "Regression and multi-source extensions"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Mostly classification evaluations"
+    ],
+    "source_type": "paper",
+    "summary": "Introduces Raincoat for time-series UDA with both feature and label-shift handling.",
+    "title": "Domain Adaptation for Time Series Under Feature and Label Shifts",
+    "url": "https://arxiv.org/abs/2302.03133",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Benchmark standardization is needed"
+    ],
+    "authors": [
+      "Hassan Ismail Fawaz",
+      "Ganesh Del Grosso",
+      "Tanguy Kerdoncuff",
+      "Aurelie Boisbunon",
+      "Illyyne Saffar"
+    ],
+    "citation": "S21",
+    "claims": [
+      "Current TS-UDA methods vary strongly across shifts"
+    ],
+    "conclusions": [
+      "Benchmarking is prerequisite for fair progress"
+    ],
+    "contributions": [
+      "Seven TS-UDA benchmark datasets and protocols"
+    ],
+    "future_work": [
+      "Include source-free and regression scenarios"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Task emphasis on classification"
+    ],
+    "source_type": "paper",
+    "summary": "Adds benchmark datasets/backbones for TS-UDA, useful to stress-test source-selection strategies.",
+    "title": "Deep Unsupervised Domain Adaptation for Time Series Classification: a Benchmark",
+    "url": "https://arxiv.org/abs/2312.09857",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Stable causal rationales across domains"
+    ],
+    "authors": [
+      "Junxin Lu",
+      "Shiliang Sun"
+    ],
+    "citation": "S22",
+    "claims": [
+      "Causal rationale extraction improves transfer reliability"
+    ],
+    "conclusions": [
+      "Causal priors can reduce negative transfer"
+    ],
+    "contributions": [
+      "Causal disentanglement for TS-UDA"
+    ],
+    "future_work": [
+      "Causal diagnostics for real benchmarks"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Causal assumptions may not always hold"
+    ],
+    "source_type": "paper",
+    "summary": "Proposes causal-rationale disentanglement to improve robustness of TS-UDA under spurious correlations.",
+    "title": "CauDiTS: Causal Disentangled Domain Adaptation of Multivariate Time Series",
+    "url": "https://proceedings.mlr.press/v235/lu24i.html",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Multiple labeled sources and unlabeled target"
+    ],
+    "authors": [
+      "Petar Stojanov",
+      "et al."
+    ],
+    "citation": "S23",
+    "claims": [
+      "Cross-source label structure improves adaptation"
+    ],
+    "conclusions": [
+      "Multi-source contrastive signals are beneficial"
+    ],
+    "contributions": [
+      "Contrastive-adversarial MS-UDA for TS"
+    ],
+    "future_work": [
+      "Regression and source weighting analysis"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Primarily classification outcomes"
+    ],
+    "source_type": "paper",
+    "summary": "MS-UDA method for time series that uses cross-source contrastive structure and adversarial alignment.",
+    "title": "CALDA: Improving Multi-Source Time Series Domain Adaptation With Contrastive Adversarial Learning",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37486844/",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Source model available but source data unavailable"
+    ],
+    "authors": [
+      "Zhenyu Yang",
+      "et al."
+    ],
+    "citation": "S24",
+    "claims": [
+      "Full-spectrum temporal-frequency modeling improves SFDA"
+    ],
+    "conclusions": [
+      "Source-free adaptation can be competitive"
+    ],
+    "contributions": [
+      "Wavelet multiscale imputation for SFDA"
+    ],
+    "future_work": [
+      "Integration with dataset retrieval/selection"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not directly a source dataset selection method"
+    ],
+    "source_type": "paper",
+    "summary": "Recent source-free TSDA method using wavelet multiscale decomposition; informative for no-source-data regimes.",
+    "title": "Source-free time series domain adaptation with wavelet-based multi-scale temporal imputation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40184865/",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Real-world shifts differ from synthetic benchmarks"
+    ],
+    "authors": [
+      "Pang Wei Koh",
+      "Shiori Sagawa",
+      "Henrik Marklund",
+      "Sang Michael Xie",
+      "Marvin Zhang",
+      "Akshay Balsubramani",
+      "Weihua Hu",
+      "Michihiro Yasunaga",
+      "Richard Lanas Phillips",
+      "Irena Gao",
+      "Tony Lee",
+      "Etienne David",
+      "Ian Stavness",
+      "Wei Guo",
+      "Berton Earnshaw",
+      "Imran Haque",
+      "Sara Beery",
+      "Jure Leskovec",
+      "Anshul Kundaje",
+      "Emma Pierson",
+      "Sergey Levine",
+      "Chelsea Finn",
+      "Percy Liang"
+    ],
+    "citation": "S25",
+    "claims": [
+      "Existing methods leave substantial OOD gaps"
+    ],
+    "conclusions": [
+      "Need stronger robust adaptation methods"
+    ],
+    "contributions": [
+      "Large curated OOD benchmark"
+    ],
+    "future_work": [
+      "Label-free and weakly supervised shift handling"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not specific to IWLS"
+    ],
+    "source_type": "paper",
+    "summary": "Benchmark suite for realistic distribution shifts with standardized evaluation and code.",
+    "title": "WILDS: A Benchmark of in-the-Wild Distribution Shifts",
+    "url": "https://proceedings.mlr.press/v139/koh21a.html",
+    "year": 2021
+  },
+  {
+    "assumptions": [
+      "Importance criteria can downweight hard-to-transfer samples"
+    ],
+    "authors": [
+      "Y. Li",
+      "et al."
+    ],
+    "citation": "S26",
+    "claims": [
+      "Weighted adversarial training improves UDA"
+    ],
+    "conclusions": [
+      "Instance weighting can mitigate negative transfer"
+    ],
+    "contributions": [
+      "IWCA architecture and selection criterion"
+    ],
+    "future_work": [
+      "Theoretical guarantees for weighting criteria"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Focuses on classification"
+    ],
+    "source_type": "paper",
+    "summary": "Combines adversarial adaptation with sample weighting and pseudo-label selection.",
+    "title": "Importance-weighted conditional adversarial network for unsupervised domain adaptation",
+    "url": "https://doi.org/10.1016/j.eswa.2020.113404",
+    "year": 2020
+  },
+  {
+    "assumptions": [
+      "Covariate shift and sparse kernel classifier"
+    ],
+    "authors": [
+      "Liping Jing",
+      "et al."
+    ],
+    "citation": "S27",
+    "claims": [
+      "Reliable IWCV improves parameter search"
+    ],
+    "conclusions": [
+      "Sparse weighted adaptation is effective"
+    ],
+    "contributions": [
+      "IW-IVM and RIWCV model selection"
+    ],
+    "future_work": [
+      "Regression extension of IVM weighting"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Classifier-focused"
+    ],
+    "source_type": "paper",
+    "summary": "Sparse probabilistic classifier with importance-weighted model selection for UDA.",
+    "title": "Importance Weighted Import Vector Machine for Unsupervised Domain Adaptation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27810840/",
+    "year": 2017
+  },
+  {
+    "assumptions": [
+      "Target examples can be related to sources via point-to-set metrics"
+    ],
+    "authors": [
+      "Jiang Guo",
+      "Darsh Shah",
+      "Regina Barzilay"
+    ],
+    "citation": "S28",
+    "claims": [
+      "Adaptive source weighting beats equal pooling"
+    ],
+    "conclusions": [
+      "Instance-wise source relevance helps avoid negative transfer"
+    ],
+    "contributions": [
+      "Unsupervised source-attention mixture model"
+    ],
+    "future_work": [
+      "Generalize to regression/time-series"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "NLP-focused experiments"
+    ],
+    "source_type": "paper",
+    "summary": "Learns target-dependent source weighting in multi-source adaptation, conceptually aligned with dataset selection.",
+    "title": "Multi-Source Domain Adaptation with Mixture of Experts",
+    "url": "https://aclanthology.org/D18-1498/",
+    "year": 2018
+  },
+  {
+    "assumptions": [
+      "Per-target-instance source relevance is learnable"
+    ],
+    "authors": [
+      "Xia Cui",
+      "Danushka Bollegala"
+    ],
+    "citation": "S29",
+    "claims": [
+      "Attention-based source selection improves robustness"
+    ],
+    "conclusions": [
+      "Explainable source relevance is possible"
+    ],
+    "contributions": [
+      "Domain-attention aggregation across sources"
+    ],
+    "future_work": [
+      "Extension to continuous outcomes"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Text classification setting"
+    ],
+    "source_type": "paper",
+    "summary": "Attention-based source selection over multiple domains for UDA.",
+    "title": "Multi-Source Attention for Unsupervised Domain Adaptation",
+    "url": "https://aclanthology.org/2020.aacl-main.87/",
+    "year": 2020
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "emadeldeen24 and contributors"
+    ],
+    "citation": "S30",
+    "claims": [
+      "Standardized training/evaluation pipelines"
+    ],
+    "conclusions": [
+      "Useful reproducibility backbone for Setting C"
+    ],
+    "contributions": [
+      "Reusable benchmark code"
+    ],
+    "future_work": [
+      "Regression modules"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Primarily classification tasks"
+    ],
+    "source_type": "paper",
+    "summary": "Reference implementation and benchmark harness for TS-UDA methods and datasets.",
+    "title": "ADATIME repository",
+    "url": "https://github.com/emadeldeen24/AdaTime",
+    "year": 2022
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Ericsson Research"
+    ],
+    "citation": "S31",
+    "claims": [
+      "Supports fair comparisons"
+    ],
+    "conclusions": [
+      "Good candidate for reproducible experiments"
+    ],
+    "contributions": [
+      "Benchmark implementation for TS-UDA"
+    ],
+    "future_work": [
+      "Regression/selection tasks"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Classification orientation"
+    ],
+    "source_type": "paper",
+    "summary": "Code for the deep TS-UDA benchmark, useful for rapid baseline reproduction.",
+    "title": "UDA-4-TSC repository",
+    "url": "https://github.com/EricssonResearch/UDA-4-TSC",
+    "year": 2023
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "p-lambda and contributors"
+    ],
+    "citation": "S32",
+    "claims": [
+      "Improves comparability of OOD methods"
+    ],
+    "conclusions": [
+      "Useful for external validation of shift metrics"
+    ],
+    "contributions": [
+      "Standardized loaders/metrics for distribution-shift benchmarks"
+    ],
+    "future_work": [
+      "Expanded regression domains"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Limited tabular regression tasks aligned with IWLS"
+    ],
+    "source_type": "paper",
+    "summary": "Open-source benchmark package for diverse real-world distribution shifts.",
+    "title": "WILDS repository",
+    "url": "https://github.com/p-lambda/wilds",
+    "year": 2021
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Hoang Anh Dau",
+      "et al."
+    ],
+    "citation": "S33",
+    "claims": [
+      "Broad benchmark coverage"
+    ],
+    "conclusions": [
+      "Useful source candidate bank"
+    ],
+    "contributions": [
+      "Standardized TS datasets"
+    ],
+    "future_work": [
+      "Regression-focused curation"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Mostly classification labels"
+    ],
+    "source_type": "paper",
+    "summary": "Large library of time-series datasets; useful source pool for synthetic-to-real source selection studies.",
+    "title": "UCR Time Series Classification Archive",
+    "url": "https://www.cs.ucr.edu/~eamonn/time_series_data_2018/",
+    "year": 2018
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Davide Anguita",
+      "Alessandro Ghio",
+      "Luca Oneto",
+      "Xavier Parra",
+      "Jorge L. Reyes-Ortiz"
+    ],
+    "citation": "S34",
+    "claims": [
+      "Supports domain-shift evaluations"
+    ],
+    "conclusions": [
+      "Common TS-UDA benchmark domain"
+    ],
+    "contributions": [
+      "Cross-subject domain splits"
+    ],
+    "future_work": [
+      "Regression-style labels"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Classification-only"
+    ],
+    "source_type": "paper",
+    "summary": "Widely used wearable-sensor dataset with multiple subject domains for adaptation studies.",
+    "title": "UCI HAR Dataset",
+    "url": "https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones",
+    "year": 2013
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Gary M. Weiss",
+      "et al."
+    ],
+    "citation": "S35",
+    "claims": [
+      "Useful for domain-shift experiments"
+    ],
+    "conclusions": [
+      "Candidate source pool for TS adaptation"
+    ],
+    "contributions": [
+      "Sensor-based cross-domain activity data"
+    ],
+    "future_work": [
+      "Continuous target variables"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Classification-centric"
+    ],
+    "source_type": "paper",
+    "summary": "Smartphone/sensor activity dataset with user/domain shift variations used in TS adaptation.",
+    "title": "WISDM dataset",
+    "url": "https://www.cis.fordham.edu/wisdm/dataset.php",
+    "year": 2019
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Bob Kemp",
+      "et al."
+    ],
+    "citation": "S36",
+    "claims": [
+      "Supports cross-subject shift experiments"
+    ],
+    "conclusions": [
+      "Relevant for healthcare TS adaptation"
+    ],
+    "contributions": [
+      "Public physiological time-series data"
+    ],
+    "future_work": [
+      "Construct regression targets"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Task labels not regression-oriented by default"
+    ],
+    "source_type": "paper",
+    "summary": "PhysioNet sleep dataset often used for domain adaptation across subjects/devices.",
+    "title": "Sleep-EDF Expanded Database",
+    "url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+    "year": 2013
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Andreas Stisen",
+      "et al."
+    ],
+    "citation": "S37",
+    "claims": [
+      "Contains realistic domain shifts"
+    ],
+    "conclusions": [
+      "Useful in multi-source adaptation settings"
+    ],
+    "contributions": [
+      "Multi-device domain heterogeneity"
+    ],
+    "future_work": [
+      "Derive regression tasks"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Classification-first benchmark"
+    ],
+    "source_type": "paper",
+    "summary": "Cross-device/cross-user activity dataset useful for domain-shift experiments.",
+    "title": "Heterogeneity Activity Recognition Data Set (HHAR)",
+    "url": "https://archive.ics.uci.edu/dataset/344/heterogeneity+activity+recognition",
+    "year": 2015
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "WILDS team"
+    ],
+    "citation": "S38",
+    "claims": [
+      "Tracks in-the-wild distribution-shift performance"
+    ],
+    "conclusions": [
+      "Good external benchmark resource"
+    ],
+    "contributions": [
+      "Dataset cards and evaluation guidance"
+    ],
+    "future_work": [],
+    "key_equations": [],
+    "limitations": [
+      "Not specialized for IWLS source selection"
+    ],
+    "source_type": "paper",
+    "summary": "Central access point for benchmark documentation, splits, and leaderboards.",
+    "title": "WILDS Benchmark Website",
+    "url": "https://wilds.stanford.edu/",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Ratio estimation as primitive for many shift problems"
+    ],
+    "authors": [
+      "Masashi Sugiyama",
+      "Taiji Suzuki",
+      "Takafumi Kanamori"
+    ],
+    "citation": "S39",
+    "claims": [
+      "Density-ratio estimation subsumes many adaptation tasks"
+    ],
+    "conclusions": [
+      "Direct ratio methods are central for covariate shift"
+    ],
+    "contributions": [
+      "Unified theory and algorithms for ratio estimation"
+    ],
+    "future_work": [
+      "Modern deep ratio estimation"
+    ],
+    "key_equations": [
+      "w(x)=p_t(x)/p_s(x)"
+    ],
+    "limitations": [
+      "Pre-deep-learning era benchmarking"
+    ],
+    "source_type": "paper",
+    "summary": "Comprehensive treatment of density-ratio estimation methods and theory; foundational for IWLS implementations.",
+    "title": "Density Ratio Estimation in Machine Learning",
+    "url": "https://doi.org/10.1017/CBO9781139035613",
+    "year": 2012
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Jose G. Moreno-Torres",
+      "et al."
+    ],
+    "citation": "S40",
+    "claims": [
+      "Method behavior depends strongly on support overlap and estimation error"
+    ],
+    "conclusions": [
+      "Need for robust diagnostics and evaluation"
+    ],
+    "contributions": [
+      "Taxonomy of covariate-shift methods"
+    ],
+    "future_work": [
+      "Deep and benchmark-era updates"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Pre-2020 method coverage"
+    ],
+    "source_type": "paper",
+    "summary": "Survey organizing covariate-shift correction families and practical caveats; useful for gap analysis in proposed objective design.",
+    "title": "A Review of Two Decades of Covariate Shift Adaptation",
+    "url": "https://www.researchgate.net/publication/307853240_A_Review_of_Two_Decades_of_Covariate_Shift_Adaptation",
+    "year": 2017
+  },
+  {
+    "assumptions": [
+      "Generalized label-shift setting"
+    ],
+    "authors": [
+      "Remi Tachet des Combes",
+      "et al."
+    ],
+    "citation": "S41",
+    "claims": [
+      "Naive invariant representations may harm under label shift"
+    ],
+    "conclusions": [
+      "Shift type identification is essential"
+    ],
+    "contributions": [
+      "Conditional distribution matching objective and bounds"
+    ],
+    "future_work": [
+      "Regression extensions"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Primarily classification evaluations"
+    ],
+    "source_type": "paper",
+    "summary": "Analyzes adaptation with generalized label/conditional shift, relevant when pure covariate-shift assumptions fail in source selection.",
+    "title": "Domain adaptation under target and conditional shift",
+    "url": "https://papers.nips.cc/paper/2020/hash/dfbfa7ddcfffeb581f50edcf9a0204bb-Abstract.html",
+    "year": 2020
+  },
+  {
+    "assumptions": [
+      "Multiple source domains with target unlabeled data"
+    ],
+    "authors": [
+      "Junxiang Wang",
+      "et al."
+    ],
+    "citation": "S42",
+    "claims": [
+      "Improves over prior multi-source TSDA baselines"
+    ],
+    "conclusions": [
+      "Multi-source alignment is promising for TS"
+    ],
+    "contributions": [
+      "New multi-source TSDA architecture"
+    ],
+    "future_work": [
+      "Theoretically grounded source weighting"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Limited regression evidence"
+    ],
+    "source_type": "paper",
+    "summary": "Recent KDD work on multi-source TSDA; directly relevant to source-mixture construction in Setting B.",
+    "title": "POND: Multi Source Time Series Domain Adaptation",
+    "url": "https://doi.org/10.1145/3637528.3671561",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Online adaptation setting"
+    ],
+    "authors": [
+      "Hao Zhao",
+      "Yuejiang Liu",
+      "Alexandre Alahi",
+      "Tao Lin"
+    ],
+    "citation": "S43",
+    "claims": [
+      "Hyperparameter/model selection dominates many reported gains"
+    ],
+    "conclusions": [
+      "Rigorous protocol is mandatory"
+    ],
+    "contributions": [
+      "TTA benchmark and protocol pitfalls"
+    ],
+    "future_work": [
+      "Unified adaptation evaluation standards"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "TTA focus rather than source selection"
+    ],
+    "source_type": "paper",
+    "summary": "Benchmark evidence that adaptation claims are sensitive to protocol and model selection; directly relevant to no-target-label constraint.",
+    "title": "On Pitfalls of Test-Time Adaptation",
+    "url": "https://arxiv.org/abs/2306.03536",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Consistency and confidence filtering improve adaptation"
+    ],
+    "authors": [
+      "David Berthelot",
+      "Rebecca Roelofs",
+      "Kihyuk Sohn",
+      "Nicholas Carlini",
+      "Alexey Kurakin"
+    ],
+    "citation": "S44",
+    "claims": [
+      "Single recipe can be competitive across settings"
+    ],
+    "conclusions": [
+      "Useful strong baseline family"
+    ],
+    "contributions": [
+      "Unified SSL/UDA training objective"
+    ],
+    "future_work": [
+      "Time-series and regression variants"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Predominantly vision tasks"
+    ],
+    "source_type": "paper",
+    "summary": "Strong modern DA baseline useful as comparator in benchmark settings.",
+    "title": "AdaMatch: A Unified Approach to Semi-Supervised Learning and Domain Adaptation",
+    "url": "https://openreview.net/forum?id=Q5uh1Nvv5dm",
+    "year": 2022
+  },
+  {
+    "assumptions": [
+      "Covariate shift and squared loss"
+    ],
+    "authors": [
+      "RICAM authors"
+    ],
+    "citation": "S45",
+    "claims": [
+      "Weight variance strongly affects finite-sample behavior"
+    ],
+    "conclusions": [
+      "Conditioning/ESS diagnostics are critical"
+    ],
+    "contributions": [
+      "IWLS-focused analysis"
+    ],
+    "future_work": [
+      "Broader benchmark validation"
+    ],
+    "key_equations": [
+      "\\hat\\beta_{IWLS}=\\arg\\min_\\beta\\sum_i w_i(y_i-x_i^\\top\\beta)^2"
+    ],
+    "limitations": [
+      "Report-level dissemination"
+    ],
+    "source_type": "paper",
+    "summary": "Technical report focused on IWLS behavior and sample complexity under covariate shift, aligned with the user\u2019s objective framing.",
+    "title": "Importance Weighted Least Squares for Covariate Shift",
+    "url": "https://www.ricam.oeaw.ac.at/files/reports/21/rep21-17.pdf",
+    "year": 2021
+  },
+  {
+    "assumptions": [],
+    "authors": [],
+    "citation": "S46",
+    "claims": [],
+    "conclusions": [],
+    "contributions": [],
+    "future_work": [
+      "Retry scraping and complete structured extraction"
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Could not retrieve full text due endpoint error during this run"
+    ],
+    "source_type": "paper",
+    "summary": "User-provided recent related link; retrieval endpoint was unstable during scraping, so only metadata-level inclusion is provided.",
+    "title": "Preprint arXiv:2602.02066",
+    "url": "https://arxiv.org/abs/2602.02066",
+    "year": 2026
+  }
+]

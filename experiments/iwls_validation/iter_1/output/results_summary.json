@@ -1,0 +1,74 @@
+{
+  "runtime_sec": 535.0371797084808,
+  "records": 200,
+  "results_csv": "paper/data/iter_1/iwls_results.csv",
+  "summary_csv": "paper/tables/iter_1/table_main_metrics.csv",
+  "significance_csv": "paper/tables/iter_1/table_significance.csv",
+  "ablation_csv": "paper/tables/iter_1/table_ablation_vs_pooled.csv",
+  "governance_csv": "paper/tables/iter_1/table_governance_audit.csv",
+  "gate_quality_csv": "paper/tables/iter_1/table_expC_gate_quality.csv",
+  "gate_retention_csv": "paper/tables/iter_1/table_expC_retention_error.csv",
+  "gate_threshold_csv": "paper/tables/iter_1/table_expC_threshold_feasibility.csv",
+  "figures": [
+    "paper/figures/iter_1/fig_main_results.pdf",
+    "paper/figures/iter_1/fig_stability_tradeoff.pdf",
+    "paper/figures/iter_1/fig_ablation_pooled_gap.pdf",
+    "paper/figures/iter_1/fig_real_setting_performance.pdf",
+    "paper/figures/iter_1/fig_artifact_quality_checks.pdf",
+    "paper/figures/iter_1/fig_expC_gate_roc_pr.pdf",
+    "paper/figures/iter_1/fig_expC_retention_vs_error.pdf",
+    "paper/figures/iter_1/fig_expC_threshold_feasibility.pdf"
+  ],
+  "sympy_report": "experiments/iwls_validation/iter_1/output/sympy_validation_report.txt",
+  "pdf_checks": "experiments/iwls_validation/iter_1/output/pdf_readability_checks.json",
+  "datasets": [
+    "paper/data/iter_1/iwls_results.csv"
+  ],
+  "tables": [
+    "paper/tables/iter_1/table_main_metrics.csv",
+    "paper/tables/iter_1/table_significance.csv",
+    "paper/tables/iter_1/table_ablation_vs_pooled.csv",
+    "paper/tables/iter_1/table_regime_stratified.csv",
+    "paper/tables/iter_1/table_governance_audit.csv",
+    "paper/tables/iter_1/table_expC_gate_quality.csv",
+    "paper/tables/iter_1/table_expC_retention_error.csv",
+    "paper/tables/iter_1/table_expC_threshold_feasibility.csv"
+  ],
+  "figure_checks": {
+    "plot_legend_overlap_ratio": 0.03664351851851852
+  },
+  "schema_validation_strict": true,
+  "selected_config": {
+    "alpha": 0.3,
+    "beta": 0.1,
+    "gamma": 0.5,
+    "ridge_lambda": 0.0001,
+    "ratio_estimator": "logistic_ratio_proxy",
+    "clipping": "none",
+    "adaptive_gamma": true,
+    "ess_floor": 200.0,
+    "cond_ref": 120.0,
+    "gamma_ess_scale": 0.8,
+    "gamma_cond_scale": 0.25,
+    "candidate_pool_size": 16,
+    "selection_reason": "ablation_selected:cfg_0379"
+  },
+  "ablation_grid_size": 384,
+  "real_settings_loaded": [
+    "R_u4tsc_cwrBearing",
+    "R_u4tsc_mfd"
+  ],
+  "real_data_warnings": [],
+  "license_and_schema_compliance_rate": 1.0,
+  "confirmatory_analysis": {
+    "name": "regime_stratified_pooled_gap",
+    "table_path": "paper/tables/iter_1/table_regime_stratified.csv"
+  },
+  "expC_diagnostics": {
+    "roc_rows": 240,
+    "pr_rows": 240,
+    "retention_rows": 60,
+    "threshold_rows": 15,
+    "gate_quality_rows": 15
+  }
+}

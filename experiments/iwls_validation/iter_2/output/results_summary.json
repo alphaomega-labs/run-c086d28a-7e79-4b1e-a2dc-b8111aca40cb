@@ -1,0 +1,58 @@
+{
+  "runtime_sec": 2.1063504219055176,
+  "records": 200,
+  "results_csv": "paper/data/iter_2/iwls_results.csv",
+  "summary_csv": "paper/tables/iter_2/table_main_metrics.csv",
+  "significance_csv": "paper/tables/iter_2/table_significance.csv",
+  "ablation_csv": "paper/tables/iter_2/table_ablation_vs_pooled.csv",
+  "governance_csv": "paper/tables/iter_2/table_governance_audit.csv",
+  "figures": [
+    "paper/figures/iter_2/fig_main_results.pdf",
+    "paper/figures/iter_2/fig_stability_tradeoff.pdf",
+    "paper/figures/iter_2/fig_ablation_pooled_gap.pdf",
+    "paper/figures/iter_2/fig_real_setting_performance.pdf",
+    "paper/figures/iter_2/fig_artifact_quality_checks.pdf"
+  ],
+  "sympy_report": "experiments/iwls_validation/iter_2/output/sympy_validation_report.txt",
+  "pdf_checks": "experiments/iwls_validation/iter_2/output/pdf_readability_checks.json",
+  "datasets": [
+    "paper/data/iter_2/iwls_results.csv"
+  ],
+  "tables": [
+    "paper/tables/iter_2/table_main_metrics.csv",
+    "paper/tables/iter_2/table_significance.csv",
+    "paper/tables/iter_2/table_ablation_vs_pooled.csv",
+    "paper/tables/iter_2/table_regime_stratified.csv",
+    "paper/tables/iter_2/table_governance_audit.csv"
+  ],
+  "figure_checks": {
+    "plot_legend_overlap_ratio": 0.020881316104530374
+  },
+  "schema_validation_strict": true,
+  "selected_config": {
+    "alpha": 0.3,
+    "beta": 0.5,
+    "gamma": 0.5,
+    "ridge_lambda": 0.001,
+    "ratio_estimator": "gaussian_diag_proxy",
+    "clipping": "p99",
+    "adaptive_gamma": true,
+    "ess_floor": 200.0,
+    "cond_ref": 120.0,
+    "gamma_ess_scale": 0.8,
+    "gamma_cond_scale": 0.25,
+    "candidate_pool_size": 8,
+    "selection_reason": "ablation_selected:cfg_0001"
+  },
+  "ablation_grid_size": 2,
+  "real_settings_loaded": [
+    "R_u4tsc_cwrBearing",
+    "R_u4tsc_mfd"
+  ],
+  "real_data_warnings": [],
+  "license_and_schema_compliance_rate": 1.0,
+  "confirmatory_analysis": {
+    "name": "regime_stratified_pooled_gap",
+    "table_path": "paper/tables/iter_2/table_regime_stratified.csv"
+  }
+}

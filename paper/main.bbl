@@ -1,0 +1,276 @@
+\begin{thebibliography}{36}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ben-David et~al.(2010)Ben-David, Blitzer, Crammer, Kulesza, Pereira,
+  and Vaughan]{BenDavid2010Theory}
+Shai Ben-David, John Blitzer, Koby Crammer, Alex Kulesza, Fernando Pereira, and
+  Jennifer~Wortman Vaughan.
+\newblock A theory of learning from different domains.
+\newblock \emph{Machine Learning}, 79\penalty0 (1--2):\penalty0 151--175, 2010.
+\newblock \doi{10.1007/s10994-009-5152-4}.
+\newblock URL
+  \url{https://link.springer.com/article/10.1007/s10994-009-5152-4}.
+
+\bibitem[Berthelot et~al.(2022)Berthelot, Roelofs, Sohn, Carlini, and
+  Kurakin]{Berthelot2022AdaMatch}
+David Berthelot, Rebecca Roelofs, Kihyuk Sohn, Nicholas Carlini, and Alexey
+  Kurakin.
+\newblock Adamatch: A unified approach to semi-supervised learning and domain
+  adaptation.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+\newblock URL \url{https://openreview.net/forum?id=Q5uh1Nvv5dm}.
+
+\bibitem[Cui \& Bollegala(2020)Cui and Bollegala]{Cui2020MultiSourceAttention}
+Xia Cui and Danushka Bollegala.
+\newblock Multi-source attention for unsupervised domain adaptation.
+\newblock In \emph{Proceedings of AACL-IJCNLP}, 2020.
+\newblock URL \url{https://aclanthology.org/2020.aacl-main.87/}.
+
+\bibitem[emadeldeen24 \& contributors(2022)emadeldeen24 and
+  contributors]{AdaTimeRepo2022}
+emadeldeen24 and contributors.
+\newblock Adatime repository, 2022.
+\newblock URL \url{https://github.com/emadeldeen24/AdaTime}.
+
+\bibitem[Fawaz et~al.(2023)Fawaz, Del~Grosso, Kerdoncuff, Boisbunon, and
+  Saffar]{Fawaz2023Benchmark}
+Hassan~Ismail Fawaz, Ganesh Del~Grosso, Tanguy Kerdoncuff, Aur{\'e}lie
+  Boisbunon, and Illyyne Saffar.
+\newblock Deep unsupervised domain adaptation for time series classification: A
+  benchmark.
+\newblock \emph{arXiv preprint arXiv:2312.09857}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2312.09857}.
+
+\bibitem[Feng et~al.(2024)Feng, He, Jiao, Kang, and Wang]{Feng2024Quantile}
+Xingdong Feng, Xin He, Yuling Jiao, Lican Kang, and Caixing Wang.
+\newblock Deep nonparametric quantile regression under covariate shift.
+\newblock \emph{Journal of Machine Learning Research}, 25, 2024.
+\newblock URL \url{https://jmlr.org/papers/v25/24-0906.html}.
+
+\bibitem[Ganin et~al.(2016)Ganin, Ustinova, Ajakan, Germain, Larochelle,
+  Laviolette, Marchand, and Lempitsky]{Ganin2016DANN}
+Yaroslav Ganin, Evgeniya Ustinova, Hana Ajakan, Pascal Germain, Hugo
+  Larochelle, Francois Laviolette, Mario Marchand, and Victor Lempitsky.
+\newblock Domain-adversarial training of neural networks.
+\newblock \emph{Journal of Machine Learning Research}, 17:\penalty0 1--35,
+  2016.
+\newblock URL \url{https://www.jmlr.org/papers/v17/15-239.html}.
+
+\bibitem[Gogolashvili et~al.(2023)Gogolashvili, Zecchin, Kanagawa, Kountouris,
+  and Filippone]{Gogolashvili2023NeedIW}
+Davit Gogolashvili, Matteo Zecchin, Motonobu Kanagawa, Marios Kountouris, and
+  Maurizio Filippone.
+\newblock When is importance weighting correction needed for covariate shift
+  adaptation?
+\newblock \emph{arXiv preprint arXiv:2303.04020}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2303.04020}.
+
+\bibitem[Gretton et~al.(2012)Gretton, Borgwardt, Rasch, Sch{"o}lkopf, and
+  Smola]{Gretton2012MMD}
+Arthur Gretton, Karsten~M. Borgwardt, Malte~J. Rasch, Bernhard Sch{"o}lkopf,
+  and Alexander Smola.
+\newblock A kernel two-sample test.
+\newblock \emph{Journal of Machine Learning Research}, 13:\penalty0 723--773,
+  2012.
+\newblock URL \url{https://www.jmlr.org/papers/v13/gretton12a.html}.
+
+\bibitem[Guo et~al.(2018)Guo, Shah, and Barzilay]{Guo2018MoE}
+Jiang Guo, Darsh Shah, and Regina Barzilay.
+\newblock Multi-source domain adaptation with mixture of experts.
+\newblock In \emph{Proceedings of EMNLP}, 2018.
+\newblock URL \url{https://aclanthology.org/D18-1498/}.
+
+\bibitem[He et~al.(2023)He, Queen, Koker, Cuevas, Tsiligkaridis, and
+  Zitnik]{He2023Raincoat}
+Huan He, Owen Queen, Teddy Koker, Consuelo Cuevas, Theodoros Tsiligkaridis, and
+  Marinka Zitnik.
+\newblock Domain adaptation for time series under feature and label shifts.
+\newblock \emph{arXiv preprint arXiv:2302.03133}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2302.03133}.
+
+\bibitem[Huang et~al.(2006)Huang, Smola, Gretton, Borgwardt, and
+  Sch{"o}lkopf]{Huang2006KMM}
+Jiayuan Huang, Alex Smola, Arthur Gretton, Karsten Borgwardt, and Bernhard
+  Sch{"o}lkopf.
+\newblock Correcting sample selection bias by unlabeled data.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2006.
+\newblock URL
+  \url{https://papers.nips.cc/paper/3075-correcting-sample-selection-bias-by-unlabeled-data}.
+
+\bibitem[Kanagawa et~al.(2023)Kanagawa, Alacaoglu, Zecchin, and
+  Filippone]{Kanagawa2023Regularization}
+Motonobu Kanagawa, Ahmet Alacaoglu, Matteo Zecchin, and Maurizio Filippone.
+\newblock General regularization in covariate shift adaptation.
+\newblock \emph{arXiv preprint arXiv:2307.11503}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2307.11503}.
+
+\bibitem[Koh et~al.(2021)Koh, Sagawa, Marklund, Xie, Zhang, Balsubramani, Hu,
+  Yasunaga, et~al.]{Koh2021WILDS}
+Pang~Wei Koh, Shiori Sagawa, Henrik Marklund, Sang~Michael Xie, Marvin Zhang,
+  Akshay Balsubramani, Weihua Hu, Michihiro Yasunaga, et~al.
+\newblock Wilds: A benchmark of in-the-wild distribution shifts.
+\newblock In \emph{Proceedings of ICML}, 2021.
+\newblock URL \url{https://proceedings.mlr.press/v139/koh21a.html}.
+
+\bibitem[Li et~al.(2020)]{Li2020IWCA}
+Y.~Li et~al.
+\newblock Importance-weighted conditional adversarial network for unsupervised
+  domain adaptation.
+\newblock \emph{Expert Systems with Applications}, 160, 2020.
+\newblock \doi{10.1016/j.eswa.2020.113404}.
+\newblock URL \url{https://doi.org/10.1016/j.eswa.2020.113404}.
+
+\bibitem[Long et~al.(2015)Long, Cao, Wang, and Jordan]{Long2015DAN}
+Mingsheng Long, Yue Cao, Jianmin Wang, and Michael~I. Jordan.
+\newblock Learning transferable features with deep adaptation networks.
+\newblock In \emph{Proceedings of ICML}, 2015.
+\newblock URL \url{https://proceedings.mlr.press/v37/long15.html}.
+
+\bibitem[Long et~al.(2018)Long, Cao, Wang, and Jordan]{Long2018CDAN}
+Mingsheng Long, Zhangjie Cao, Jianmin Wang, and Michael~I. Jordan.
+\newblock Conditional adversarial domain adaptation.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2018.
+\newblock URL
+  \url{https://papers.nips.cc/paper/7436-conditional-adversarial-domain-adaptation}.
+
+\bibitem[Lu \& Sun(2024)Lu and Sun]{Lu2024CauDiTS}
+Junxin Lu and Shiliang Sun.
+\newblock Caudits: Causal disentangled domain adaptation of multivariate time
+  series.
+\newblock In \emph{Proceedings of ICML}, 2024.
+\newblock URL \url{https://proceedings.mlr.press/v235/lu24i.html}.
+
+\bibitem[Mansour et~al.(2009)Mansour, Mohri, and
+  Rostamizadeh]{Mansour2009Discrepancy}
+Yishay Mansour, Mehryar Mohri, and Afshin Rostamizadeh.
+\newblock Domain adaptation: Learning bounds and algorithms.
+\newblock In \emph{Conference on Learning Theory}, 2009.
+\newblock URL
+  \url{https://research.google/pubs/domain-adaptation-learning-bounds-and-algorithms/}.
+
+\bibitem[Mansour et~al.(2010)Mansour, Mohri, and
+  Rostamizadeh]{Mansour2010Renyi}
+Yishay Mansour, Mehryar Mohri, and Afshin Rostamizadeh.
+\newblock Multiple source adaptation and the renyi divergence.
+\newblock In \emph{Proceedings of UAI}, 2010.
+\newblock URL \url{https://proceedings.mlr.press/v9/mansour10a.html}.
+
+\bibitem[p~lambda \& contributors(2021)p~lambda and
+  contributors]{WildsRepo2021}
+p~lambda and contributors.
+\newblock Wilds repository, 2021.
+\newblock URL \url{https://github.com/p-lambda/wilds}.
+
+\bibitem[Ragab et~al.(2023)Ragab, Eldele, Tan, Foo, Chen, Wu, Kwoh, and
+  Li]{Ragab2023AdaTime}
+Mohamed Ragab, Emadeldeen Eldele, Wee~Ling Tan, Chuan-Sheng Foo, Zhenghua Chen,
+  Min Wu, Chee-Keong Kwoh, and Xiaoli Li.
+\newblock Adatime: A benchmarking suite for domain adaptation on time series
+  data.
+\newblock \emph{arXiv preprint arXiv:2203.08321}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2203.08321}.
+
+\bibitem[Research(2023)]{UDA4TSCRepo2023}
+Ericsson Research.
+\newblock Uda-4-tsc repository, 2023.
+\newblock URL \url{https://github.com/EricssonResearch/UDA-4-TSC}.
+
+\bibitem[{RICAM Authors}(2021)]{RICAM2021IWLS}
+{RICAM Authors}.
+\newblock Importance weighted least squares for covariate shift, 2021.
+\newblock URL \url{https://www.ricam.oeaw.ac.at/files/reports/21/rep21-17.pdf}.
+
+\bibitem[Saito et~al.(2018)Saito, Watanabe, Ushiku, and Harada]{Saito2018MCD}
+Kuniaki Saito, Kohei Watanabe, Yoshitaka Ushiku, and Tatsuya Harada.
+\newblock Maximum classifier discrepancy for unsupervised domain adaptation.
+\newblock In \emph{Proceedings of CVPR}, 2018.
+\newblock URL
+  \url{https://openaccess.thecvf.com/content_cvpr_2018/html/Saito_Maximum_Classifier_Discrepancy_CVPR_2018_paper.html}.
+
+\bibitem[Stojanov et~al.(2023)]{Stojanov2023CALDA}
+Petar Stojanov et~al.
+\newblock Calda: Improving multi-source time series domain adaptation with
+  contrastive adversarial learning.
+\newblock \emph{IEEE Journal of Biomedical and Health Informatics}, 2023.
+\newblock URL \url{https://pubmed.ncbi.nlm.nih.gov/37486844/}.
+
+\bibitem[Sugiyama et~al.(2007{\natexlab{a}})Sugiyama, Krauledat, and
+  M{"u}ller]{Sugiyama2007IWCV}
+Masashi Sugiyama, Matthias Krauledat, and Klaus-Robert M{"u}ller.
+\newblock Covariate shift adaptation by importance weighted cross validation.
+\newblock \emph{Journal of Machine Learning Research}, 8:\penalty0 985--1005,
+  2007{\natexlab{a}}.
+\newblock URL \url{https://www.jmlr.org/papers/v8/sugiyama07a.html}.
+
+\bibitem[Sugiyama et~al.(2007{\natexlab{b}})Sugiyama, Nakajima, Kashima, von
+  B{"u}nau, and Kawanabe]{Sugiyama2007KLIEP}
+Masashi Sugiyama, Shinichi Nakajima, Hisashi Kashima, Paul von B{"u}nau, and
+  Motoaki Kawanabe.
+\newblock Direct importance estimation with model selection and its application
+  to covariate shift adaptation.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  2007{\natexlab{b}}.
+\newblock URL
+  \url{https://papers.nips.cc/paper_files/paper/2007/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract.html}.
+
+\bibitem[Sugiyama et~al.(2012)Sugiyama, Suzuki, and
+  Kanamori]{Sugiyama2012DensityRatioBook}
+Masashi Sugiyama, Taiji Suzuki, and Takafumi Kanamori.
+\newblock \emph{Density Ratio Estimation in Machine Learning}.
+\newblock Cambridge University Press, 2012.
+\newblock \doi{10.1017/CBO9781139035613}.
+\newblock URL \url{https://doi.org/10.1017/CBO9781139035613}.
+
+\bibitem[Sun \& Saenko(2016)Sun and Saenko]{Sun2016DeepCORAL}
+Baochen Sun and Kate Saenko.
+\newblock Deep coral: Correlation alignment for deep domain adaptation.
+\newblock \emph{arXiv preprint arXiv:1607.01719}, 2016.
+\newblock URL \url{https://arxiv.org/abs/1607.01719}.
+
+\bibitem[Tachet~des Combes et~al.(2020)Tachet~des Combes, Zhao, Wang, Gordon,
+  and Cuturi]{Combes2020ConditionalShift}
+R{\'e}mi Tachet~des Combes, Han Zhao, Yu-Xiang Wang, Geoffrey Gordon, and Marco
+  Cuturi.
+\newblock Domain adaptation under target and conditional shift.
+\newblock \emph{Advances in Neural Information Processing Systems}, 33, 2020.
+\newblock URL
+  \url{https://papers.nips.cc/paper/2020/hash/dfbfa7ddcfffeb581f50edcf9a0204bb-Abstract.html}.
+
+\bibitem[Tzeng et~al.(2017)Tzeng, Hoffman, Saenko, and Darrell]{Tzeng2017ADDA}
+Eric Tzeng, Judy Hoffman, Kate Saenko, and Trevor Darrell.
+\newblock Adversarial discriminative domain adaptation.
+\newblock In \emph{Proceedings of CVPR}, 2017.
+\newblock URL
+  \url{https://openaccess.thecvf.com/content_cvpr_2017/html/Tzeng_Adversarial_Discriminative_Domain_CVPR_2017_paper.html}.
+
+\bibitem[Wang et~al.(2024)]{Wang2024POND}
+Junxiang Wang et~al.
+\newblock Pond: Multi source time series domain adaptation.
+\newblock In \emph{Proceedings of KDD}, 2024.
+\newblock \doi{10.1145/3637528.3671561}.
+\newblock URL \url{https://doi.org/10.1145/3637528.3671561}.
+
+\bibitem[Yang et~al.(2025)]{Yang2025SourceFreeTSDA}
+Zhenyu Yang et~al.
+\newblock Source-free time series domain adaptation with wavelet-based
+  multi-scale temporal imputation.
+\newblock \emph{IEEE Journal of Biomedical and Health Informatics}, 2025.
+\newblock URL \url{https://pubmed.ncbi.nlm.nih.gov/40184865/}.
+
+\bibitem[Zhang et~al.(2019)Zhang, Liu, Long, and Jordan]{Zhang2019MDD}
+Yuchen Zhang, Ting Liu, Mingsheng Long, and Michael~I. Jordan.
+\newblock Bridging theory and algorithm for domain adaptation.
+\newblock In \emph{Proceedings of ICML}, 2019.
+\newblock URL \url{https://proceedings.mlr.press/v97/zhang19i.html}.
+
+\bibitem[Zhao et~al.(2023)Zhao, Liu, Alahi, and Lin]{Zhao2023TTAPitfalls}
+Hao Zhao, Yuejiang Liu, Alexandre Alahi, and Tao Lin.
+\newblock On pitfalls of test-time adaptation.
+\newblock \emph{arXiv preprint arXiv:2306.03536}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2306.03536}.
+
+\end{thebibliography}

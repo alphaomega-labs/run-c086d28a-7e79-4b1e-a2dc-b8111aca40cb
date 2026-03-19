@@ -1,0 +1,42 @@
+{
+  "runtime_sec": 481.8261172771454,
+  "records": 120,
+  "results_csv": "paper/data/iwls_results.csv",
+  "summary_csv": "paper/tables/table_main_metrics.csv",
+  "significance_csv": "paper/tables/table_significance.csv",
+  "ablation_csv": "paper/tables/table_ablation_vs_pooled.csv",
+  "figures": [
+    "paper/figures/fig_main_results.pdf",
+    "paper/figures/fig_stability_tradeoff.pdf",
+    "paper/figures/fig_ablation_pooled_gap.pdf"
+  ],
+  "sympy_report": "experiments/iwls_validation/output/sympy_validation_report.txt",
+  "pdf_checks": "experiments/iwls_validation/output/pdf_readability_checks.json",
+  "datasets": [
+    "paper/data/iwls_results.csv"
+  ],
+  "tables": [
+    "paper/tables/table_main_metrics.csv",
+    "paper/tables/table_significance.csv",
+    "paper/tables/table_ablation_vs_pooled.csv"
+  ],
+  "schema_validation_strict": true,
+  "selected_config": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "gamma": 0.0,
+    "ridge_lambda": 0.0001,
+    "ratio_estimator": "gaussian_diag_proxy",
+    "clipping": "none",
+    "adaptive_gamma": true,
+    "ess_floor": 200.0,
+    "cond_ref": 120.0,
+    "gamma_ess_scale": 0.8,
+    "gamma_cond_scale": 0.25,
+    "candidate_pool_size": 8,
+    "selection_reason": "ablation_selected:cfg_0113"
+  },
+  "ablation_grid_size": 384,
+  "real_settings_loaded": [],
+  "real_data_warnings": []
+}

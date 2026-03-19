@@ -1,0 +1,3 @@
+uncertainty_regime,n_pairs,mean_gap_stability_minus_pooled,median_gap_stability_minus_pooled,paired_test,p_value
+high,13,-0.002221905508272908,2.0151464609265649e-07,paired_wilcoxon,0.933837890625
+low,12,0.023885114982278244,-0.013715332347612103,paired_wilcoxon,0.11669921875

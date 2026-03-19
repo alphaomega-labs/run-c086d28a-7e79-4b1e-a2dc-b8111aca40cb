@@ -1,0 +1,57 @@
+{
+  "manifest_path": "experiments/iwls_validation/iter_2/real_data/real_settings.json",
+  "metadata_path": "experiments/iwls_validation/iter_2/real_data/real_settings_metadata.json",
+  "settings_count": 2,
+  "settings": [
+    {
+      "name": "u4tsc_cwrBearing",
+      "source_paths": [
+        "experiments/iwls_validation/iter_2/real_data/cwrBearing/source_a.csv",
+        "experiments/iwls_validation/iter_2/real_data/cwrBearing/source_b.csv"
+      ],
+      "target_unlabeled_path": "experiments/iwls_validation/iter_2/real_data/cwrBearing/target_unlabeled.csv",
+      "target_test_path": "experiments/iwls_validation/iter_2/real_data/cwrBearing/target_test.csv",
+      "feature_columns": [
+        "source_accuracy",
+        "iwcv_accuracy",
+        "classifier_code",
+        "dataset_family_code",
+        "source_domain_code",
+        "target_domain_code",
+        "domain_shift_indicator",
+        "source_minus_iwcv",
+        "source_target_gap",
+        "iwcv_target_gap"
+      ],
+      "target_column": "target_accuracy",
+      "license_status": "research_only",
+      "schema_transform": "classification_to_regression_via_accuracy_table_features",
+      "provenance": "UDA-4-TSC results/*.csv"
+    },
+    {
+      "name": "u4tsc_mfd",
+      "source_paths": [
+        "experiments/iwls_validation/iter_2/real_data/mfd/source_a.csv",
+        "experiments/iwls_validation/iter_2/real_data/mfd/source_b.csv"
+      ],
+      "target_unlabeled_path": "experiments/iwls_validation/iter_2/real_data/mfd/target_unlabeled.csv",
+      "target_test_path": "experiments/iwls_validation/iter_2/real_data/mfd/target_test.csv",
+      "feature_columns": [
+        "source_accuracy",
+        "iwcv_accuracy",
+        "classifier_code",
+        "dataset_family_code",
+        "source_domain_code",
+        "target_domain_code",
+        "domain_shift_indicator",
+        "source_minus_iwcv",
+        "source_target_gap",
+        "iwcv_target_gap"
+      ],
+      "target_column": "target_accuracy",
+      "license_status": "research_only",
+      "schema_transform": "classification_to_regression_via_accuracy_table_features",
+      "provenance": "UDA-4-TSC results/*.csv"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "path": "paper/figures/iter_2/fig_main_results.pdf",
+    "width": 2304,
+    "height": 1008,
+    "pixel_variance": 1153.4194940743766,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_2/fig_stability_tradeoff.pdf",
+    "width": 2304,
+    "height": 864,
+    "pixel_variance": 1141.5575862437083,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_2/fig_ablation_pooled_gap.pdf",
+    "width": 2304,
+    "height": 1008,
+    "pixel_variance": 4143.691488903975,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_2/fig_real_setting_performance.pdf",
+    "width": 1440,
+    "height": 864,
+    "pixel_variance": 3229.414339166497,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/iter_2/fig_artifact_quality_checks.pdf",
+    "width": 2160,
+    "height": 864,
+    "pixel_variance": 6903.768138562693,
+    "readable": true
+  }
+]

@@ -1,0 +1,10 @@
+SymPy validation report for C1-C3
+
+C1 epsilon_tot identity exact: True
+C1 symbolic regret expansion residual (should be expression with Delta_star,Jhat): Delta_star - Jhat
+C2 linear-rate contraction factor (1 - mu/L): (L - mu)/L
+C3 dG/dV = a1 (nonnegative)
+C3 dG/dU = a2 (nonnegative)
+C3 dG/dT = a3 (nonnegative)
+
+Result: all structural symbolic checks are consistent with nonnegativity and positivity assumptions in SYMPY.md.

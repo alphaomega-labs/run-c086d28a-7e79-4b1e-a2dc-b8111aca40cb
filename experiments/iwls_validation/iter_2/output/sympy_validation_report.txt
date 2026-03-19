@@ -1,0 +1,21 @@
+SymPy validation report for C1-C3
+
+C1 checks:
+- C1-1 epsilon_tot identity exact: True
+- C1-1 sandwich endpoints: Delta_low = Jhat - alpha*epsB - beta*epsC - epsA - epsD*gamma, Delta_high = Jhat + alpha*epsB + beta*epsC + epsA + epsD*gamma
+- C1-2 symbolic regret transfer residual: Delta_star - Jhat
+- C1-3 sensitivity derivatives match component errors: True
+
+C2 checks:
+- C2-1/2 target contraction factor (1 - mu/L): (L - mu)/L
+- C2-4 one-step descent symbolic RHS U(pi+) <= U_pi - grad_norm**2/(2*L)
+- C2-5 PL lower bound expression ||grad||^2 >= 2*mu*(U_pi - U_star)
+
+C3 checks:
+- C3-1 dG/dV = a1 (nonnegative)
+- C3-1 dG/dU = a2 (nonnegative)
+- C3-1 dG/dT = a3 (nonnegative)
+- C3-2 interval midpoint offset ((g_safe+g_harm)/2 - g_safe): g_harm/2 - g_safe/2
+- C3-4 nesting implication uses tau2-tau1 term: -tau1 + tau2
+
+Result: all structural symbolic checks are consistent with nonnegativity and positivity assumptions in SYMPY.md.

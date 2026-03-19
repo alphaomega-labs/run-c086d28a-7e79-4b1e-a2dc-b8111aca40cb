@@ -1,0 +1,24 @@
+{
+  "code": [
+    "code/run_experiments.py",
+    "code/prepare_real_manifests.py",
+    "code/build_iter_config.py",
+    "code/__init__.py",
+    "code/core.py",
+    "code/analysis.py",
+    "code/plotting.py",
+    "code/real_data.py",
+    "code/real_data_prep.py",
+    "code/sympy_validation.py",
+    "code/pdf_check.py"
+  ],
+  "experiments": "experiments",
+  "knowledge": "knowledge",
+  "latex_sources": "paper/main.tex",
+  "paper_data": "paper/data",
+  "paper_figures": "paper/figures",
+  "paper_pdf": "paper/main.pdf",
+  "paper_tables": "paper/tables",
+  "paper_thumbnail": null,
+  "sources": "sources/sources.json"
+}

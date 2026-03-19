@@ -1,0 +1,38 @@
+{
+  "generator": "prepare_u4tsc_regression_manifests",
+  "u4tsc_repo": "experiments/external/UDA-4-TSC",
+  "settings": [
+    {
+      "name": "u4tsc_cwrBearing",
+      "dataset_family": "cwrBearing",
+      "rows": 77,
+      "source_a_rows": 47,
+      "source_b_rows": 30,
+      "license_status": "research_only",
+      "schema_transform": "classification_to_regression_via_accuracy_table_features",
+      "provenance": "experiments/external/UDA-4-TSC/results/*.csv",
+      "paths": {
+        "source_a": "experiments/iwls_validation/iter_1/real_data/cwrBearing/source_a.csv",
+        "source_b": "experiments/iwls_validation/iter_1/real_data/cwrBearing/source_b.csv",
+        "target_unlabeled": "experiments/iwls_validation/iter_1/real_data/cwrBearing/target_unlabeled.csv",
+        "target_test": "experiments/iwls_validation/iter_1/real_data/cwrBearing/target_test.csv"
+      }
+    },
+    {
+      "name": "u4tsc_mfd",
+      "dataset_family": "mfd",
+      "rows": 77,
+      "source_a_rows": 47,
+      "source_b_rows": 30,
+      "license_status": "research_only",
+      "schema_transform": "classification_to_regression_via_accuracy_table_features",
+      "provenance": "experiments/external/UDA-4-TSC/results/*.csv",
+      "paths": {
+        "source_a": "experiments/iwls_validation/iter_1/real_data/mfd/source_a.csv",
+        "source_b": "experiments/iwls_validation/iter_1/real_data/mfd/source_b.csv",
+        "target_unlabeled": "experiments/iwls_validation/iter_1/real_data/mfd/target_unlabeled.csv",
+        "target_test": "experiments/iwls_validation/iter_1/real_data/mfd/target_test.csv"
+      }
+    }
+  ]
+}

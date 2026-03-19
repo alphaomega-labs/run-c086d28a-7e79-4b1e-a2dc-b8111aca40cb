@@ -1,0 +1,4 @@
+comparison,test,p_value,holm_adjusted_p,n_pairs,note
+mmd_vs_stability,paired_wilcoxon,0.6102827357863625,1.0,25,Normality via Shapiro-Wilk; paired t-test if normal else Wilcoxon.
+pooled_vs_stability,paired_wilcoxon,0.9982760483656256,0.9982760483656256,25,Normality via Shapiro-Wilk; paired t-test if normal else Wilcoxon.
+wasserstein_vs_stability,paired_wilcoxon,0.6102827357863625,1.0,25,Normality via Shapiro-Wilk; paired t-test if normal else Wilcoxon.

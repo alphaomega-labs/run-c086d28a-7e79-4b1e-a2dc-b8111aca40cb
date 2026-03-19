@@ -1,0 +1,152 @@
+{
+  "abstract": "Given unlabeled sample, how to detect the optimal datasetet in the internet used to apply importance weighted least squares?",
+  "artifacts": [
+    {
+      "kind": "github_repo",
+      "label": "GitHub Repo",
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-c086d28a-7e79-4b1e-a2dc-b8111aca40cb"
+    },
+    {
+      "kind": "paper_pdf",
+      "label": "Paper PDF",
+      "uri": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-c086d28a-7e79-4b1e-a2dc-b8111aca40cb/main/paper/main.pdf"
+    },
+    {
+      "kind": "latex_sources",
+      "label": "LaTeX Sources",
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-c086d28a-7e79-4b1e-a2dc-b8111aca40cb/blob/main/paper/main.tex"
+    },
+    {
+      "kind": "sources",
+      "label": "Sources",
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-c086d28a-7e79-4b1e-a2dc-b8111aca40cb/blob/main/sources/sources.json"
+    }
+  ],
+  "artifacts_summary": "Exported a full compile-ready manuscript (`paper/main.tex`), bibliography (`paper/references.bib`), equation trace map (`paper/EQUATION_USAGE_MAP.md`), and compiled PDF (`paper/main.pdf`). The manuscript now aligns with latest iter_1 findings, includes explicit limitations/future-work deltas, references current validation figures/tables/code assets, and records theorem-conditioned caveats.",
+  "compute_budget": "TBD",
+  "constraints": [
+    "Compute budget is TBD",
+    "Target deadline is 2026-03-05",
+    "Focus on unsupervised domain adaptation and importance weighted least squares",
+    "Candidate datasets must be tabular/time-series regression compatible with IWLS assumptions and feature-schema alignable to target",
+    "Licenses must permit research use/redistribution (prefer permissive)",
+    "Minimum candidate size is 1k samples unless justified otherwise",
+    "Maximum size should be compute-aware via subsampling with logged seeds",
+    "No target labels may be used for source selection"
+  ],
+  "context_id": "724872e2-3ee2-4cca-ba1d-031b87307ec0",
+  "created_at": "2026-03-05T22:08:10.977027+00:00",
+  "dataset_links": [
+    "https://github.com/emadeldeen24/AdaTime"
+  ],
+  "difficulty": "Frontier",
+  "domain": "ML",
+  "evaluation_plan": "Three-setting evaluation. Setting A (datasets as measures): synthetic covariate-shift benchmarks with known source/target distributions for bound faithfulness. Setting B (target sample to optimal source distribution): semi-synthetic mixtures with unlabeled target samples and reweighted/combined source candidates. Setting C (pure sample): real UDA time-series benchmarks from AdaTime and related public datasets. Baselines: random source, nearest source by MMD/Wasserstein, pooled-source IWLS, unweighted LS, oracle best-source (retrospective only). Protocol: train with source labels plus unlabeled target for ratio/discrepancy estimation; tune without target labels; evaluate on held-out labeled target test split; use 5 seeds/folds; report mean\u00b1std; paired Wilcoxon or paired t-test after normality check with multiple-comparison correction.",
+  "expected_artifacts": [
+    "Paper",
+    "Code"
+  ],
+  "full_description": "There are a lot of sota results for the sample complexity of importance weighted least squares used to correct least squares in unsupervised domain adaptation. i want to turn this problem around. given an unlabaled dataset, i want to know which of the datasets assumed to be in the internet are optimal for importance weighted least squares. i want to consider three settings. first, datasets as measures, second, givne samples from target and asking for optimal source distribution, last pure sample setting. importantly, the error measure needs to be questioned rigorously.",
+  "goals": [
+    "Use a bilevel objective to select source dataset/distribution minimizing an upper bound on target squared-loss excess risk for IWLS under covariate shift",
+    "Optimize an operational finite-sample surrogate combining empirical weighted-loss proxy, density-ratio estimation error, and importance-weight variance/conditioning penalty",
+    "Prioritize outcomes by target excess risk/MSE first, then IW stability (ESS and weight second moment), then bound tightness, with Wasserstein/MMD/IPM as diagnostics",
+    "Evaluate across three settings (measures, target-sample-to-source-distribution, pure-sample real benchmark) against strong baselines with statistical significance testing",
+    "Deliver both theory and algorithm: objective with assumptions and guarantee/non-guarantee conditions, reproducible source-selection algorithm, and empirical evidence of target-risk improvement"
+  ],
+  "key_terms": [
+    "importance weighted least squares",
+    "unsupervised domain adaptation",
+    "dataset selection",
+    "sample complexity",
+    "source distribution",
+    "target unlabeled sample",
+    "error measure",
+    "bilevel optimization",
+    "covariate shift",
+    "effective sample size",
+    "MMD",
+    "Wasserstein distance"
+  ],
+  "original_problem": {
+    "compute_budget": "TBD",
+    "constraints": [
+      "Compute budget is TBD",
+      "Target deadline is 2026-03-05",
+      "Focus on unsupervised domain adaptation and importance weighted least squares",
+      "Candidate datasets must be tabular/time-series regression compatible with IWLS assumptions and feature-schema alignable to target",
+      "Licenses must permit research use/redistribution (prefer permissive)",
+      "Minimum candidate size is 1k samples unless justified otherwise",
+      "Maximum size should be compute-aware via subsampling with logged seeds",
+      "No target labels may be used for source selection"
+    ],
+    "dataset_links": [
+      "https://github.com/emadeldeen24/AdaTime"
+    ],
+    "difficulty": "Frontier",
+    "domain": "ML",
+    "evaluation_plan": "Three-setting evaluation. Setting A (datasets as measures): synthetic covariate-shift benchmarks with known source/target distributions for bound faithfulness. Setting B (target sample to optimal source distribution): semi-synthetic mixtures with unlabeled target samples and reweighted/combined source candidates. Setting C (pure sample): real UDA time-series benchmarks from AdaTime and related public datasets. Baselines: random source, nearest source by MMD/Wasserstein, pooled-source IWLS, unweighted LS, oracle best-source (retrospective only). Protocol: train with source labels plus unlabeled target for ratio/discrepancy estimation; tune without target labels; evaluate on held-out labeled target test split; use 5 seeds/folds; report mean\u00b1std; paired Wilcoxon or paired t-test after normality check with multiple-comparison correction.",
+    "expected_artifacts": [
+      "Paper",
+      "Code"
+    ],
+    "full_description": "There are a lot of sota results for the sample complexity of importance weighted least squares used to correct least squares in unsupervised domain adaptation. i want to turn this problem around. given an unlabaled dataset, i want to know which of the datasets assumed to be in the internet are optimal for importance weighted least squares. i want to consider three settings. first, datasets as measures, second, givne samples from target and asking for optimal source distribution, last pure sample setting. importantly, the error measure needs to be questioned rigorously.",
+    "goals": [
+      "Use a bilevel objective to select source dataset/distribution minimizing an upper bound on target squared-loss excess risk for IWLS under covariate shift",
+      "Optimize an operational finite-sample surrogate combining empirical weighted-loss proxy, density-ratio estimation error, and importance-weight variance/conditioning penalty",
+      "Prioritize outcomes by target excess risk/MSE first, then IW stability (ESS and weight second moment), then bound tightness, with Wasserstein/MMD/IPM as diagnostics",
+      "Evaluate across three settings (measures, target-sample-to-source-distribution, pure-sample real benchmark) against strong baselines with statistical significance testing",
+      "Deliver both theory and algorithm: objective with assumptions and guarantee/non-guarantee conditions, reproducible source-selection algorithm, and empirical evidence of target-risk improvement"
+    ],
+    "key_terms": [
+      "importance weighted least squares",
+      "unsupervised domain adaptation",
+      "dataset selection",
+      "sample complexity",
+      "source distribution",
+      "target unlabeled sample",
+      "error measure",
+      "bilevel optimization",
+      "covariate shift",
+      "effective sample size",
+      "MMD",
+      "Wasserstein distance"
+    ],
+    "problem_type": "Open Question",
+    "related_links": [
+      "https://www.ricam.oeaw.ac.at/files/reports/21/rep21-17.pdf",
+      "https://arxiv.org/abs/2602.02066",
+      "https://www.jmlr.org/papers/volume24/23-1004/23-1004.pdf",
+      "https://arxiv.org/pdf/2307.11503",
+      "/api/mock/files/450a1c22-b4b9-4bbd-a3f7-80229a97bc01?name=Importance_Weighted_Least_Squares%20(9).pdf"
+    ],
+    "request_text": "Title: Optimal dataset selection for importance weighted least squares\nAbstract: Given unlabeled sample, how to detect the optimal datasetet in the internet used to apply importance weighted least squares?\nFull Description: There are a lot of sota results for the sample complexity of importance weighted least squares used to correct least squares in unsupervised domain adaptation. i want to turn this problem around. given an unlabaled dataset, i want to know which of the datasets assumed to be in the internet are optimal for importance weighted least squares. i want to consider three settings. first, datasets as measures, second, givne samples from target and asking for optimal source distribution, last pure sample setting. importantly, the error measure needs to be questioned rigorously.\nProblem Type: Open Question\nDifficulty: Frontier\nDomain: ML\nOriginator: Admin Curator\nCompute Budget: TBD\nTarget Deadline: 2026-03-05\nTags: statistics, numerical analysis\nCategories: ML\nExpected Artifacts: Paper, Code\nRelated Links: https://www.ricam.oeaw.ac.at/files/reports/21/rep21-17.pdf, https://arxiv.org/abs/2602.02066, https://www.jmlr.org/papers/volume24/23-1004/23-1004.pdf, https://arxiv.org/pdf/2307.11503, /api/mock/files/450a1c22-b4b9-4bbd-a3f7-80229a97bc01?name=Importance_Weighted_Least_Squares%20(9).pdf\nDataset Links: https://github.com/emadeldeen24/AdaTime",
+    "tags": [
+      "statistics",
+      "numerical analysis"
+    ],
+    "target_deadline": "2026-03-05"
+  },
+  "paper_pdf_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-c086d28a-7e79-4b1e-a2dc-b8111aca40cb/main/paper/main.pdf",
+  "paper_thumbnail_url": null,
+  "pipeline_id": "724872e2-3ee2-4cca-ba1d-031b87307ec0",
+  "problem_type": "Open Question",
+  "related_links": [
+    "https://www.ricam.oeaw.ac.at/files/reports/21/rep21-17.pdf",
+    "https://arxiv.org/abs/2602.02066",
+    "https://www.jmlr.org/papers/volume24/23-1004/23-1004.pdf",
+    "https://arxiv.org/pdf/2307.11503",
+    "/api/mock/files/450a1c22-b4b9-4bbd-a3f7-80229a97bc01?name=Importance_Weighted_Least_Squares%20(9).pdf"
+  ],
+  "repo_url": "https://github.com/omegaXiv-labs/omegaXiv-run-c086d28a-7e79-4b1e-a2dc-b8111aca40cb",
+  "request_text": "Title: Optimal dataset selection for importance weighted least squares\nAbstract: Given unlabeled sample, how to detect the optimal datasetet in the internet used to apply importance weighted least squares?\nFull Description: There are a lot of sota results for the sample complexity of importance weighted least squares used to correct least squares in unsupervised domain adaptation. i want to turn this problem around. given an unlabaled dataset, i want to know which of the datasets assumed to be in the internet are optimal for importance weighted least squares. i want to consider three settings. first, datasets as measures, second, givne samples from target and asking for optimal source distribution, last pure sample setting. importantly, the error measure needs to be questioned rigorously.\nProblem Type: Open Question\nDifficulty: Frontier\nDomain: ML\nOriginator: Admin Curator\nCompute Budget: TBD\nTarget Deadline: 2026-03-05\nTags: statistics, numerical analysis\nCategories: ML\nExpected Artifacts: Paper, Code\nRelated Links: https://www.ricam.oeaw.ac.at/files/reports/21/rep21-17.pdf, https://arxiv.org/abs/2602.02066, https://www.jmlr.org/papers/volume24/23-1004/23-1004.pdf, https://arxiv.org/pdf/2307.11503, /api/mock/files/450a1c22-b4b9-4bbd-a3f7-80229a97bc01?name=Importance_Weighted_Least_Squares%20(9).pdf\nDataset Links: https://github.com/emadeldeen24/AdaTime",
+  "run_id": "c086d28a-7e79-4b1e-a2dc-b8111aca40cb",
+  "session_id": "724872e2-3ee2-4cca-ba1d-031b87307ec0",
+  "tags": [
+    "statistics",
+    "numerical analysis"
+  ],
+  "target_deadline": "2026-03-05",
+  "title": "Optimal dataset selection for importance weighted least squares",
+  "updated_at": "2026-03-06T07:57:53.818578+00:00"
+}

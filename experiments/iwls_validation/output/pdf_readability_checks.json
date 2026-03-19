@@ -1,0 +1,23 @@
+[
+  {
+    "path": "paper/figures/fig_main_results.pdf",
+    "width": 2592,
+    "height": 720,
+    "pixel_variance": 2422.9071250224174,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/fig_stability_tradeoff.pdf",
+    "width": 2016,
+    "height": 720,
+    "pixel_variance": 2254.8860156026835,
+    "readable": true
+  },
+  {
+    "path": "paper/figures/fig_ablation_pooled_gap.pdf",
+    "width": 2016,
+    "height": 720,
+    "pixel_variance": 2183.771384576996,
+    "readable": true
+  }
+]
